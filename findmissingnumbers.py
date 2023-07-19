@@ -52,7 +52,10 @@ class Solution:
                 return "Invalid input"
             elif len(numbers) == 1:
                 return "None missing"
+            
             full = [i for i in range(int(min(numbers)+0.5), int(max(numbers)+0.5)+1)]
+            for i in range(len(numbers)):
+                 numbers[i] = int(numbers[i]+0.5)
             ans = list(set(full) - set(numbers))
             return ans
                     
