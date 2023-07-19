@@ -53,8 +53,10 @@ class Solution:
             elif len(numbers) == 1:
                 return "None missing"
             numbers.sort()
-            full = range(numbers[0], numbers[-1]+1)
-            return list(set(full) - set(numbers))
+            full = [i for i in range(int(numbers[0]), int(numbers[-1])+1)]
+            ans = list(set(full) - set(numbers))
+            ans.sort()
+            return ans
                     
 
 def main():
